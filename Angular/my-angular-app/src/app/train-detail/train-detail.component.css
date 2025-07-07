@@ -1,0 +1,35 @@
+/* 
+  table {
+    width: auto;
+    border-collapse: collapse;
+  } */
+  table {
+    margin: 20px 5px 0 5px; 
+    border-collapse: collapse;
+    width: calc(100% - 10px); 
+  }
+
+  th, td {
+    padding: 10px 8px 10px 10px;
+    border: 1px solid black;
+  }
+
+  th {
+    background-color: rgb(5, 5, 70);;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 14px;
+  }
+
+  td {
+    text-align: center;
+  }
+
+  label{
+    margin-left: 2px; font-weight: bold;
+  }
+  input{
+    background-color: rgb(190, 183, 183);
+    margin-bottom: 10px;
+  }
+ 

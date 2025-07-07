@@ -1,0 +1,665 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Railway lines",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Booking/GetAllBookingDetails": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Booking/GetByBookingId": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Booking/GetByBookingDate": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "parameters": [
+          {
+            "name": "bookingDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Booking/AddBookingDetails": {
+      "post": {
+        "tags": [
+          "Booking"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookingDetailsTable"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookingDetailsTable"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookingDetailsTable"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Booking/DeleteById": {
+      "delete": {
+        "tags": [
+          "Booking"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Booking/UpdateBookingDetails": {
+      "put": {
+        "tags": [
+          "Booking"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookingDetailsTable"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookingDetailsTable"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookingDetailsTable"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Booking/GetBookingsByUsername": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "parameters": [
+          {
+            "name": "userName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Credential/GetAllCredentialDetails": {
+      "get": {
+        "tags": [
+          "Credential"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Credential/RegisterPassenger": {
+      "post": {
+        "tags": [
+          "Credential"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CredentialDetailsTable"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CredentialDetailsTable"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CredentialDetailsTable"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Credential/ValidateCredential": {
+      "post": {
+        "tags": [
+          "Credential"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CredentialDetailsTable"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CredentialDetailsTable"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CredentialDetailsTable"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Credential/ResetPassword": {
+      "put": {
+        "tags": [
+          "Credential"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/changePasswordModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/changePasswordModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/changePasswordModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Values/GetAllTrainDetails": {
+      "get": {
+        "tags": [
+          "Values"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Values/GetByTrainName": {
+      "get": {
+        "tags": [
+          "Values"
+        ],
+        "parameters": [
+          {
+            "name": "trainName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Values/GetTrainsByRoute": {
+      "get": {
+        "tags": [
+          "Values"
+        ],
+        "parameters": [
+          {
+            "name": "sourceStation",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "destinationStation",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Values/AddTrainDetails": {
+      "post": {
+        "tags": [
+          "Values"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrainDetailsTable"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrainDetailsTable"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrainDetailsTable"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Values/DeleteById": {
+      "delete": {
+        "tags": [
+          "Values"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Values/UpdateTrainDetails": {
+      "put": {
+        "tags": [
+          "Values"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrainDetailsTable"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrainDetailsTable"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrainDetailsTable"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/WeatherForecast": {
+      "get": {
+        "tags": [
+          "WeatherForecast"
+        ],
+        "operationId": "GetWeatherForecast",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BookingDetailsTable": {
+        "type": "object",
+        "properties": {
+          "sNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "trainId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "trainName": {
+            "type": "string",
+            "nullable": true
+          },
+          "trainType": {
+            "type": "string",
+            "nullable": true
+          },
+          "sourceStation": {
+            "type": "string",
+            "nullable": true
+          },
+          "destinationStation": {
+            "type": "string",
+            "nullable": true
+          },
+          "departureTime": {
+            "type": "string",
+            "format": "time"
+          },
+          "arrivalTime": {
+            "type": "string",
+            "format": "time"
+          },
+          "journeyDuration": {
+            "type": "string",
+            "format": "time",
+            "nullable": true
+          },
+          "totalSeats": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "availableSeats": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fare": {
+            "type": "number",
+            "format": "double"
+          },
+          "journeyDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "bookingDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "bookingTime": {
+            "type": "string",
+            "format": "time",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "age": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bookingId": {
+            "type": "string",
+            "nullable": true
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CredentialDetailsTable": {
+        "type": "object",
+        "properties": {
+          "sNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TrainDetailsTable": {
+        "type": "object",
+        "properties": {
+          "sNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "trainId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "trainName": {
+            "type": "string",
+            "nullable": true
+          },
+          "trainType": {
+            "type": "string",
+            "nullable": true
+          },
+          "sourceStation": {
+            "type": "string",
+            "nullable": true
+          },
+          "destinationStation": {
+            "type": "string",
+            "nullable": true
+          },
+          "departureTime": {
+            "type": "string",
+            "format": "time"
+          },
+          "arrivalTime": {
+            "type": "string",
+            "format": "time"
+          },
+          "journeyDuration": {
+            "type": "string",
+            "format": "time",
+            "nullable": true
+          },
+          "totalSeats": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "availableSeats": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fare": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "WeatherForecast": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "temperatureC": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "temperatureF": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "summary": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "changePasswordModel": {
+        "type": "object",
+        "properties": {
+          "sNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "oldPassword": {
+            "type": "string",
+            "nullable": true
+          },
+          "newPassword": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

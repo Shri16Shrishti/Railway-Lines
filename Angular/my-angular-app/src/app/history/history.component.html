@@ -1,0 +1,42 @@
+<h2>Booking History for {{ userName }}</h2>
+
+<table *ngIf="historyData.length > 0; else noData" border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Train ID</th>
+      <th>Train Name</th>
+      <th>Train Type</th>
+      <th>Source</th>
+      <th>Destination</th>
+      <th>Arrival</th>
+      <th>Departure</th>
+      <th>Duration</th>
+      <th>Journey Date</th>
+      <th>Booking Date</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Fare</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of historyData">
+      <td>{{ item.trainId }}</td>
+      <td>{{ item.trainName }}</td>
+      <td>{{ item.trainType }}</td>
+      <td>{{ item.sourceStation }}</td>
+      <td>{{ item.destinationStation }}</td>
+      <td>{{ item.arrivalTime }}</td>
+      <td>{{ item.departureTime }}</td>
+      <td>{{ item.journeyDuration }}</td>
+      <td>{{ item.journeyDate }}</td>
+      <td>{{ item.bookingDate }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.age }}</td>
+      <td>{{ item.fare }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #noData>
+  <p>No booking history found for {{ userName }}</p>
+</ng-template>

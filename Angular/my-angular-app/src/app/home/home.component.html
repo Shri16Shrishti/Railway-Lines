@@ -1,0 +1,350 @@
+<div style="position: relative; width: 100vw; height: 800px;">
+    <img src="/homeimg2.jpg" width="100%" height="800" alt="Train" style="margin-top: 5px;">
+    <!-- <div class="position-absolute top-50 start-50 translate-middle d-flex flex-column gap-1"> -->
+    <div class="position-absolute d-flex flex-column gap-1"
+        style="left: 80px; top: 50%; width: 600px; transform: translateY(-50%);">
+
+        <div class="container p-0 m-0 mt-4" style="margin-left: 10px;font-family: Body, Quicksand, sans-serif;">
+            <div class="row m-0">
+                <div class="col-6 border-end d-flex align-items-center justify-content-between"
+                    style="background-color: rgb(5, 5, 70); padding: 0 10px;">
+                    <i class="bi bi-bag-check-fill" style="color: whitesmoke; font-size: 25px;"></i>
+                    <h3 class="fw-bold m-0 text-center flex-grow-1" style="color: whitesmoke; font-size: 18px;">PNR
+                        STATUS</h3>
+                    <div style="width: 20px;"></div>
+                </div>
+
+                <div class="col-6 d-flex align-items-center justify-content-between"
+                    style="background-color: rgb(5, 5, 70); padding: 0 10px;">
+                    <i class="bi bi-clipboard2-check-fill" style="color: whitesmoke; font-size: 25px;"></i>
+                    <h3 class="fw-bold m-0 text-center flex-grow-1" style="color: whitesmoke; font-size: 18px;">CHARTS /
+                        VACANCIES</h3>
+
+                    <div style="width: 20px;"></div>
+                </div>
+
+                <div class="bg-light" style="padding-top: 30px;">
+                    <h1 class="card-title"
+                        style="text-align: center; font-size: 30px;margin-bottom: 20px;font-family: Body, Quicksand, sans-serif;">
+                        BOOK TICKET</h1>
+                    <div class="row">
+                        <div class="col-md-6" style="color: #2f4676;">
+                            <label>From</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-white">
+                                    <i class="bi bi-send-fill" style="color: #2f4676;"></i>
+                                </span>
+                                <input type="text" class="form-control" placeholder="From"
+                                    [(ngModel)]="sourceStation" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label>DD/MM/YYYY <span style="color: rgb(43, 98, 199);">*</span></label>
+                            <input type="date" class="form-control" placeholder="Date">
+                        </div>
+                        <i class="bi bi-arrow-down-up" style="color: #2f4676; margin-left: 120px;margin-top:2px;"></i>
+                        <div class="col-md-6" style="color: #2f4676;">
+                            <label>To</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-white"><i class="bi bi-geo-alt-fill"
+                                        style="color: #2f4676;"></i></span>
+                                <input type="text" class="form-control" placeholder="To"
+                                    [(ngModel)]="destinationStation" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label></label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-white"><i class="bi bi-briefcase-fill"
+                                        style="color: #2f4676;"></i></span>
+                                <select class="form-select">
+                                    <option value="" selected disabled>All Classes</option>
+                                    <option value="regular">Regular</option>
+                                    <option value="premium">Premium</option>
+                                    <option value="vip">VIP</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label></label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-white"><i class="bi bi-grid-fill"
+                                        style="color: #2f4676;"></i></span>
+                                <select class="form-select">
+                                    <option value="" selected disabled>General</option>
+                                    <option value="regular">Regular</option>
+                                    <option value="premium">Premium</option>
+                                    <option value="vip">VIP</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6" aria-disabled="true" style="visibility: hidden;">
+                            <label>To</label>
+                            <input type="text" class="form-control" placeholder="To">
+                        </div>
+
+                        <br>
+                        <div class="col-md-6 mt-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label" for="checkbox1">Person With Disablity Concession</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mt-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="checkbox1">
+                                <label class="form-check-label" for="checkbox1">Flexible With Date</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mt-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="checkbox1">
+                                <label class="form-check-label" for="checkbox1">Train With Available Birth</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mt-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="checkbox1">
+                                <label class="form-check-label" for="checkbox1">Railway Pass Concession</label>
+                            </div>
+                        </div>
+                        <div class="container mt-4">
+                            <div class="row">
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn-light" (click)="searchTrains()"
+                                        style="background-color: rgb(238, 91, 38); color: whitesmoke">Search</button>
+                                </div>
+                                <!-- <div *ngIf="trains.length > 0">
+                                    <table>
+                                      <thead>
+                                        <tr>
+                                          <th *ngFor="let column of columns">{{ column }}</th>
+                                          <th>Action</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr *ngFor="let train of trains">
+                                          <td *ngFor="let column of columns">{{ train[column] }}</td>
+                                          <td>
+                                            <a [routerLink]="['/book-ticket']" class="btn">Book</a>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                  
+                                <p *ngIf="trains.length === 0 && searched" class="text-danger mt-3">No trains found for
+                                    the given route.</p> -->
+                                <div class="col-auto ms-auto me-2">
+                                    <button type="button" class="btn btn-light"
+                                        style="background-color: rgb(238, 91, 38); color: whitesmoke; margin-left: 20px;">Easy
+                                        Booking on AskDISHA</button>
+                                </div>
+                                <span style="height: 10px;"></span>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="bg-light p-4 rounded shadow text-center" style="width: 600px;height: auto;margin-top: 10px;">
+            <span style="color: rgb(56, 56, 179);">Customers can use enhanced interface for their IRCTC related
+                queries!!</span><br>
+            <span style="color: rgb(35, 113, 230);">https://equery.irctc.co.in</span><br>
+            <span style="color: red;">Customer Care Numbers : 14646/08044647999 /08035734999</span><br>
+            <span style="color: rgb(35, 113, 230);">BEWARE OF FRAUDSTERS: Always download official IRCTC Rail Connect
+                App from <br> the Google Play Store or Apple App Store only.</span>
+
+        </div>
+
+
+
+    </div>
+    <h3
+        style="position: absolute; top: 1%; left: 63%; font-size: 3rem; color: rgb(4, 4, 78); text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); z-index: 1;">
+        INDIAN RAILWAYS
+    </h3>
+    <span style="font-size: 22px; top: 10%; left:67%;color: rgb(4, 4, 78); position: absolute; ">Safety | Security |
+        Punctuality</span>
+</div>
+<div style="background-color: #faf9f9 !important; margin-top: 25px;  box-shadow: 0 4px 8px rgba(145, 142, 142, 0.2)">
+    <img src="/Beware.jpg" width="80%" height="10%" style="margin-left: 10%;">
+</div>
+<div>
+    <h1 style="text-align: center; margin-top: 4%; font-weight: bold; margin-bottom: 10px;">Have you not found the right
+        one?<br>
+        Find a service suitable for you here.</h1>
+    <div class="d-flex flex-column align-items-center mt-4" style="gap: 30px;">
+
+        <!-- 🔹 Row 1 -->
+        <div class="d-flex justify-content-center flex-wrap" style="gap: 60px;">
+            <div class="text-center" style="width: 100px;">
+                <div class="coloricon"><i class="bi bi-airplane" style="font-size: 40px;"></i></div>
+                <div style="font-size: 15px;">FLIGHTS</div>
+            </div>
+            <div class="text-center" style="width: 100px;">
+                <div class="coloricon"><i class="bi bi-house-fill" style="font-size: 40px;"></i></div>
+                <div style="font-size: 15px;">HOTELS</div>
+            </div>
+            <div class="text-center" style="width: 100px;">
+                <div class="coloricon"><i class="bi bi-train-front" style="font-size: 40px;"></i></div>
+                <div style="font-size: 15px;">RAIL DRISHTI</div>
+            </div>
+            <div class="text-center" style="width: 100px;">
+                <div class="coloricon"><i class="bi bi-backpack2-fill" style="font-size: 40px;"></i></div>
+                <div style="font-size: 15px;">E-CATERING</div>
+            </div>
+            <div class="text-center" style="width: 100px;">
+                <div class="coloricon"><i class="bi bi-bus-front" style="font-size: 40px;"></i></div>
+                <div style="font-size: 15px;">BUS</div>
+            </div>
+        </div>
+
+        <!-- 🔹 Row 2 with long labels -->
+        <div class="d-flex justify-content-center flex-wrap" style="gap: 60px;">
+            <div class="text-center" style="width: 110px;margin-left: 10px;">
+                <div class="coloricon"><i class="bi bi-umbrella-fill" style="font-size: 40px;"></i></div>
+                <div style="font-size: 14px;">TRAVEL PACKAGE</div>
+            </div>
+            <div class="text-center" style="width: 110px;">
+                <div class="coloricon"><i class="bi bi-train-front" style="font-size: 40px;"></i></div>
+                <div style="font-size: 14px;">TOURIST TRAIN</div>
+            </div>
+            <div class="text-center" style="width: 110px;">
+                <div class="coloricon"><i class="bi bi-sunset-fill" style="font-size: 40px;"></i></div>
+                <div style="font-size: 14px;">HILL RAILWAYS</div>
+            </div>
+            <div class="text-center" style="width: 110px;">
+                <div class="coloricon"><i class="bi bi-train-lightrail-front" style="font-size: 40px;"></i></div>
+                <div style="font-size: 14px;">CHARTER TRAIN</div>
+            </div>
+            <div class="text-center" style="width: 110px;">
+                <div class="coloricon"><i class="bi bi-image" style="font-size: 40px;"></i></div>
+                <div style="font-size: 14px;">GALLERY</div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div></div>
+    <div style=" margin-top: 25px;  box-shadow: 0 4px 8px rgba(145, 142, 142, 0.2); background-color: #faf9f9 !important;;">
+        <img src="/Beware.jpg" width="80%" height="10%" style="margin-left: 10%;">
+    </div>
+    <div>
+        <h1 style="text-align: center; padding-top: 30px;">HOLIDAYS</h1>
+        <div class="container mt-4">
+            <div class="row">
+
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <img class="card-img-top" src="/maharaj.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Maharajas' Express</h5>
+                            <p class="card-text">Redefining Royalty, Luxury and Comfort, Maharajas' express takes you on
+                                a
+                                sojourn to the era of bygone stately splendour of princely states. Sylvan furnishings,
+                                elegant
+                                ambience and modern amenities are amalgamated for an “Experience Unsurpassed”. It has
+                                been a
+                                winner of “World’s Leading Luxury train” by World Travel Awards consecutively for last
+                                six
+                                years.</p>
+                        </div>
+                        <div style="margin-left: 10px;">
+                            <small>Read More -></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+
+                    <div class="card">
+                        <img class="card-img-top" src="/international.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">International Packages</h5>
+                            <p class="card-text">Best deals in International Holiday packages, handpicked by IRCTC, for
+                                Thailand, Dubai, Sri Lanka, Hong Kong, China, Macau, Bhutan, Nepal, U.K., Europe, USA,
+                                Australia
+                                etc. The packages are inclusive of sightseeing, meals, visa charges and overseas medical
+                                insurance to give you a hassle-free and memorable experience.</p>
+                        </div>
+                        <div style="margin-left: 10px;">
+                            <small>Read More -></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+
+                    <div class="card">
+                        <img class="card-img-top" src="/domestic.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Domestic Air Packages</h5>
+                            <p class="card-text">Be it the spiritual devotee seeking blessings of Tirupati, Shirdi or
+                                Mata
+                                Vaishno Devi or the leisure traveller wanting to relish the Blue mountains of North
+                                East,
+                                Sand-dunes of Rajasthan, Hamlets of Ladakh, Wonders of Himalayas, Serene lakes or
+                                Picturesque
+                                Islands, IRCTC has it all. Discover India through IRCTC!</p>
+                        </div>
+                        <div style="margin-left: 10px;">
+                            <small>Read More -></small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <br>
+
+        <div class="container mt-4">
+            <div class="row">
+
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <img class="card-img-top" src="/bharat.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Bharat Gaurav Tourist Train</h5>
+                            <p class="card-text">IRCTC operates Bharat Gaurav Tourist Train having AC III-Tier
+                                accommodation on
+                                train specially designed to promote domestic tourism in India. This train runs on
+                                various theme
+                                based circuits covering pilgrimage and heritage destinations in its itinerary on a 5
+                                days to 20
+                                days trip and showcase India’s rich cultural heritage.</p>
+                        </div>
+                        <div style="margin-left: 10px;">
+                            <small>Read More -></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+
+                    <div class="card">
+                        <img class="card-img-top" src="/railpackage.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Rail Tour Packages</h5>
+                            <p class="card-text">IRCTC offers Exclusive Rail tour packages with confirmed train tickets,
+                                sight-seeing and meals for enchanting Nilgiri Mountains, Darjeeling, Kullu Manali,
+                                Kashmir,
+                                Gangtok or divine tours of Mata Vaishno Devi, Rameswaram, Madurai, Shirdi, Tirupati etc.
+                                Holiday
+                                packages/ Land packages to these destinations are also available.</p>
+                        </div>
+                        <div style="margin-left: 10px;">
+                            <small>Read More -></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!-- <div [ngStyle]="circleStyle">
+    <i class="bi bi-airplane" [ngStyle]="iconStyle"></i>
+    </div> -->
+</div>

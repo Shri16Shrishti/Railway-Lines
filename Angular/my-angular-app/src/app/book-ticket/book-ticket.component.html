@@ -1,0 +1,65 @@
+<div class="kk">
+    <img src="/Ticket.jpg" width="1340px" height="900px">
+</div>
+
+<div class="kk2">
+    <h5 style="text-align: center; margin-top: 10px;">Book your Ticket</h5><br><br>
+
+    <div class="form-row">
+        <label>Enter Train Id</label>
+        <input type="number" [(ngModel)]="trainId" placeholder="Enter Train Id">
+    </div>
+
+    <div class="form-row">
+        <label>Enter Customer Id</label>
+        <input type="number" [(ngModel)]="customerId" (input)="onCustomerIdInput()" placeholder="Enter Customer Id">
+    </div>
+
+    <div class="form-row">
+        <label>Booking Date</label>
+        <input type="text" [value]="bookingDate" readonly>
+    </div>
+
+    <div class="form-row">
+        <label>Booking Time</label>
+        <input type="text" [value]="bookingTime" readonly>
+    </div>
+
+    <div class="form-row">
+        <label>Enter Journey Date</label>
+        <input type="date" [(ngModel)]="journeyDate" placeholder="Enter Journey Date">
+    </div>
+
+    <div class="form-row">
+        <label>Enter Source Station Id</label>
+        <input type="number" [(ngModel)]="sourceStationId" placeholder="Enter Source Station Id">
+    </div>
+
+    <div class="form-row">
+        <label>Enter Destination Station Id</label>
+        <input type="number" [(ngModel)]="destinationStationId" placeholder="Enter Destination Station Id">
+    </div>
+
+    <div class="form-row">
+        <label>Enter Class</label>
+        <input type="text" [(ngModel)]="class" placeholder="Enter Class">
+    </div>
+
+    <div class="form-row">
+        <label>Enter Seat Number</label>
+        <input type="text" [(ngModel)]="seatNumber" placeholder="Enter Seat Number">
+    </div>
+
+    <div class="form-row">
+        <label>Fare</label>
+        <input type="number" [(ngModel)]="fare" placeholder="Enter Fare">
+    </div>
+
+    <div class="form-row">
+        <label>Enter Booking Status</label>
+        <input type="text" [(ngModel)]="bookingStatus" placeholder="Enter Booking Status">
+    </div>
+<br>
+    <button type="button" class="bt btn-btn-primary" (click)="AddBooking()">BOOK TICKET</button>
+    <br><br><br>
+</div>

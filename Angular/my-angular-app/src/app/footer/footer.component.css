@@ -1,0 +1,28 @@
+.social-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 40px;
+  }
+
+  .social-icon i {
+    color: whitesmoke;
+  }
+
+  .social-icon:hover {
+    background-color: #ddd; 
+  }
+  .custom-span {
+    display: block; 
+    font-size: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  .right-span {
+    float: right;
+    color: black;
+    font-size: 12px;
+  }

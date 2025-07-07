@@ -1,0 +1,38 @@
+
+    <div class="container">
+        <div class="content" style="width: 60%; padding-top: 7%;">
+            <div style="margin-bottom: 15px;">
+            <label style="font-weight: bold; font-size: 22px;">Create Your IRCTC account</label>
+            <span style="color: rgb(226, 72, 16); font-weight: bold; font-size: 16px; text-decoration: underline;margin-left:250px;">SIGN IN</span>
+        </div>
+            <div class="container-fluid" style="width: 60%;">
+                <div style="border: 1px solid gray; width: 600px; margin-left: -140px;">
+                <p style="text-align: left; margin-left: 10px;"> 1.Please use valid E-Mail ID, Mobile number and correct personal details in registration form. This may
+                    be required for verification purpose.<br>
+                    2.Garbage / Junk values in profile may lead to deactivation of IRCTC account.<br>
+                    3.Opening Advance Reservation Period(ARP) ticket and Opening Tatkal ticket booking for unauthenticated
+                    users is allowed only after 3 days from date of User Registration (excluding the day of registration ).
+                    User may authenticate their user profile with Aadhaar to book Opening Advance Reservation Period(ARP)
+                    ticket and Opening Tatkal ticket.</p>
+                </div>
+                <div style="margin-top: 5%; margin-left:-140px;margin-bottom: 2%; width: 600px;">
+                <input type="text" class="form-control"placeholder="User Name" id="userName" name="userName" [(ngModel)]="userName"><br>
+                <!-- <input type="text" class="form-control"placeholder="Full Name" id="fullName" name="fullName" [(ngModel)]="fullName"><br> -->
+                <input type="password" class="form-control"placeholder="Password" id="password" name="password"[(ngModel)]="password"><br>
+                <!-- <input type="text" class="form-control"placeholder="Confirm Password" id="cnfpassword" name="cnfpassword" [(ngModel)]="cnfpassword"><br>
+                <input type="text" class="form-control"placeholder="Email" id="email" name="email" [(ngModel)]="email"><br>
+                <input type="text" class="form-control"placeholder="Mobile No" id="mobNo" name="mobNo" [(ngModel)]="mobNo"><br> -->
+                <label class="label1" style="background-color: rgb(109, 214, 240); width: 600px;height: 40px;">Please submit Mobile Number without ISD Code</label>
+                </div>
+                <label style="color: whitesmoke; background-color: rgb(5, 5, 95); width: 380px; margin-left: -140px; height: 40px; text-align: 10px; font-size: large;border-radius: 5%;">CSd89<i class="bi bi-arrow-clockwise" style="margin-left: 300px;"></i></label>
+                <input type="text" class="form-control"placeholder="Enter Captcha" id="captcha." style="margin-left: -140px;"><br>
+                <button type="button" class="btn btn-light" (click)="register()"
+                style="background-color: rgb(238, 91, 38); color: whitesmoke; text-align: center; width: 100px;margin-bottom: 10px;">SUBMIT</button>
+           
+            </div>
+            <img src="/fraud.jpg" alt="fraud"class="right-image" style="margin-left: 750px;">
+      </div>
+    </div>
+    <div>
+  <img src="/northeast.jpg" width="800" height="100" alt="northeast" style="margin-left: 20%; margin-bottom: 10%;">
+  </div>

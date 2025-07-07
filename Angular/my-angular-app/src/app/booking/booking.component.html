@@ -1,0 +1,163 @@
+
+<table>
+    <thead>
+      <tr>
+        <th>Train Id</th>
+        <th>Train Name</th>
+        <th>Train Type</th>
+        <th>Source Station</th>
+        <th>Destination Station</th>
+        <th>Departure Time</th>
+        <th>Arrival Time</th>
+        <th>Journey Duration</th>
+        <th>Total Seats</th>
+        <th>Available Seats</th>
+        <th>Fare</th>
+        <th>Journey Date</th>
+        <th>Booking Date</th>
+        <th>Booking Time</th>
+        <th>UserName</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Booking Id</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="AllBooking.length > 0; else noData">
+        <tr style="text-align: center;overflow-x: auto;" *ngFor="let item of AllBooking">
+            <!-- <td>{{ item.bookingId }}</td> -->
+          <td>{{ item.trainId }}</td>
+          <td>{{ item.trainName }}</td>
+          <td>{{ item.trainType }}</td>
+          <td>{{ item.sourceStation }}</td>
+          <td>{{ item.destinationStation }}</td>
+          <td>{{ item.departureTime }}</td>
+          <td>{{ item.arrivalTime }}</td>
+          <td>{{ item.journeyDuration }}</td>
+          <td>{{ item.totalSeats }}</td>
+          <td>{{ item.availableSeats }}</td>
+          <td>{{ item.fare }}</td>
+          <td>{{ item.journeyDate }}</td>
+          <td>{{ item.bookingDate }}</td>
+          <td>{{ item.bookingTime }}</td>
+          <td>{{ item.userName }}</td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.age }}</td>
+          <td>{{ item.bookingId }}</td>
+          <td>
+            <button (click)="EditModalPopUp(item)" style="border: none; background-color: rgb(181, 181, 236);"><i class="bi bi-pencil-square"></i></button>
+          </td>
+          <td>
+            <button (click)="deleteBooking(item.bookingId)" style="border: none; background-color: rgb(181, 181, 236);"><i class="bi bi-trash-fill"></i></button>
+          </td>
+        </tr>
+        <br>
+      </tbody>  
+</table>
+<div *ngIf="showModal" class="modal-backdrop" style="background-color: whitesmoke; border: 2px solid black;overflow: auto;">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h1 class="modal-title fs-5" id="exampleModalLabel"
+        style="background-color: rgb(5, 5, 70); width: 100%;color: whitesmoke; margin-top: 10px; display: flex; text-align: center; justify-content:center; border-radius: 10%; margin-left: 10px;margin-right: 10px;">
+        Edit Detail</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="CloseUpdatePopUp"></button>
+    </div>
+    <div class="modal-body" style="padding-top: 30px;">
+      <div class="row" style="margin-left: 10px;margin-right: 10px;">
+        <div class="col-md-3">
+          <label>Train Id <span style="color: red;">*</span> </label>
+          <input style="background-color: grey; color: whitesmoke;"type="int" class="form-control" [(ngModel)]="selectedTrain.trainId" readonly>
+        </div>
+
+        <div class="col-md-3">
+          <label>Train Name <span style="color: red;">*</span> </label>
+          <input style="background-color: grey; color: whitesmoke;" type="text" class="form-control" [(ngModel)]="selectedTrain.trainName" readonly>
+        </div>
+
+        <div class="col-md-3">
+          <label>Train Type <span style="color: red;">*</span> </label>
+          <input style="background-color: grey; color: whitesmoke;" type="text" class="form-control" [(ngModel)]="selectedTrain.trainType" readonly>
+        </div>
+
+        <div class="col-md-3">
+          <label>Source Station <span style="color: red;">*</span> </label>
+          <input style="background-color: grey; color: whitesmoke;" type="text" class="form-control" [(ngModel)]="selectedTrain.sourceStation" readonly>
+        </div>
+      </div>
+      <div class="row"style="margin-left: 10px;margin-right: 10px;">
+        <div class="col-md-3">
+          <label>Destination Station <span style="color: red;">*</span> </label>
+          <input style="background-color: grey; color: whitesmoke;" type="text" class="form-control" [(ngModel)]="selectedTrain.destinationStation" readonly>
+        </div>
+        <div class="col-md-3">
+          <label>Departure Time <span style="color: red;">*</span> </label>
+          <input type="text" class="form-control" [(ngModel)]="selectedTrain.departureTime" >
+        </div>
+        <div class="col-md-3">
+          <label>Arrival Time <span style="color: red;">*</span> </label>
+          <input type="text" class="form-control" [(ngModel)]="selectedTrain.arrivalTime" >
+        </div>
+        <div class="col-md-3">
+          <label>Journey Duration <span style="color: red;">*</span> </label>
+          <input type="text" class="form-control" [(ngModel)]="selectedTrain.journeyDuration" >
+        </div>
+      </div>
+      <div class="row"style="margin-left: 10px;margin-right: 10px;">
+        <div class="col-md-3">
+          <label>Total Seats <span style="color: red;">*</span> </label>
+          <input style="background-color: grey; color: whitesmoke;" type="int" class="form-control" [(ngModel)]="selectedTrain.totalSeats" readonly>
+        </div>
+        <div class="col-md-3">
+          <label>Available Seats <span style="color: red;">*</span> </label>
+          <input style="background-color: grey; color: whitesmoke;" type="int" class="form-control" [(ngModel)]="selectedTrain.availableSeats" readonly>
+        </div>
+        <div class="col-md-3">
+          <label>Fare <span style="color: red;">*</span> </label>
+          <input style="background-color: grey; color: whitesmoke;" type="text" class="form-control" [(ngModel)]="selectedTrain.fare" readonly>
+        </div>
+      </div>
+      <br>
+      <div class="row"style="margin-left: 10px;margin-right: 10px;">
+        <div class="col-md-3">
+          <label>Name <span style="color: red;">*</span> </label>
+          <input style="background-color: grey; color: whitesmoke;" type="text" class="form-control" [(ngModel)]="selectedTrain.name"placeholder ="Enter Passenger's Name" readonly>
+        </div>
+        <div class="col-md-3">
+          <label>Age <span style="color: red;">*</span> </label>
+          <input style="background-color: grey; color: whitesmoke;" type="number" class="form-control" [(ngModel)]="selectedTrain.age" placeholder="Enter Passenger's Age" readonly>
+        </div>
+        <div class="col-md-3">
+          <label>Journey Date <span style="color: red;">*</span> </label>
+          <input style="background-color: grey; color: whitesmoke;" type="date" class="form-control" readonly [(ngModel)]="selectedTrain.journeyDate" />
+        </div>
+        <div class="col-md-3">
+          <label>Booking Date</label>
+          <input style="background-color: grey; color: whitesmoke;" type="date" class="form-control" [(ngModel)]="selectedTrain.bookingDate" readonly>
+        </div>
+        <div class="col-md-3">
+          <label>Booking Time</label>
+          <input style="background-color: grey; color: whitesmoke;" type="text" class="form-control" [(ngModel)]="selectedTrain.bookingTime" readonly>
+        </div>
+        <div class="random-code-container" style="width: 340px;">
+          <label>Booking Id <span style="color: red;">*</span> </label>
+          <input style="background-color: grey; color: whitesmoke;" type="text" class="form-control random-input" [(ngModel)]="selectedTrain.bookingId" readonly />
+          <!-- <i class="fa fa-refresh refresh-icon" (click)="generateRandomCode()"></i>   -->
+        </div>
+      </div>
+      <br>
+      <button type="button" class="btn btn-success" (click)="confirmBooking()"
+            style="background-color: rgb(10, 49, 46);margin-left: 45%; color: whitesmoke;">Save</button> 
+
+    </div>
+
+  </div>
+</div>
+  <ng-template #noData>
+    <tbody>
+      <tr>
+        <td colspan="11" style="text-align:center;">No Booking details available</td>
+      </tr>
+    </tbody>
+  </ng-template>
+  

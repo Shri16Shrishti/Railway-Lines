@@ -1,0 +1,26 @@
+label {
+    color: #2f4676 !important;
+}
+
+::placeholder {
+    color: #2f4676 !important;
+    opacity: 1; 
+}
+input, select {
+    color: #2f4676 !important;
+}
+
+select option {
+    color: #2f4676 !important;
+}
+.coloricon{
+    width: 80px; height: 80px; border-radius: 50%; border: 1px solid black; 
+    display: flex; justify-content: center; align-items: center; 
+    background-color: white; color: black;
+}
+/* .icon-text {
+    text-align: center;
+    margin-top: 8px;
+    font-weight: bold;
+  } */
+   

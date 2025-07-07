@@ -1,0 +1,282 @@
+[
+  {
+    "ContainingType": "Railway_lines.Controllers.BookingController",
+    "Method": "AddBookingDetails",
+    "RelativePath": "api/Booking/AddBookingDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bookingDetails",
+        "Type": "Railway_lines.Model.BookingDetailsTable",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Railway_lines.Controllers.BookingController",
+    "Method": "DeleteById",
+    "RelativePath": "api/Booking/DeleteById",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Railway_lines.Controllers.BookingController",
+    "Method": "GetAllBookingDetails",
+    "RelativePath": "api/Booking/GetAllBookingDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Railway_lines.Controllers.BookingController",
+    "Method": "GetBookingsByUsername",
+    "RelativePath": "api/Booking/GetBookingsByUsername",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Railway_lines.Controllers.BookingController",
+    "Method": "GetByBookingDate",
+    "RelativePath": "api/Booking/GetByBookingDate",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bookingDate",
+        "Type": "System.DateOnly",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Railway_lines.Controllers.BookingController",
+    "Method": "GetByBookingId",
+    "RelativePath": "api/Booking/GetByBookingId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bookingId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Railway_lines.Controllers.BookingController",
+    "Method": "UpdateBookingDetails",
+    "RelativePath": "api/Booking/UpdateBookingDetails",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bookingDetails",
+        "Type": "Railway_lines.Model.BookingDetailsTable",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Railway_lines.Controllers.CredentialController",
+    "Method": "GetAllCredentialDetails",
+    "RelativePath": "api/Credential/GetAllCredentialDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Railway_lines.Controllers.CredentialController",
+    "Method": "RegisterPassenger",
+    "RelativePath": "api/Credential/RegisterPassenger",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDetails",
+        "Type": "Railway_lines.Model.CredentialDetailsTable",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Railway_lines.Controllers.CredentialController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/Credential/ResetPassword",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDetails",
+        "Type": "Railway_lines.ExternalModel.changePasswordModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Railway_lines.Controllers.CredentialController",
+    "Method": "ValidateCredential",
+    "RelativePath": "api/Credential/ValidateCredential",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDetails",
+        "Type": "Railway_lines.Model.CredentialDetailsTable",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Railway_lines.Controllers.ValuesController",
+    "Method": "AddTrainDetails",
+    "RelativePath": "api/Values/AddTrainDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trainDetails",
+        "Type": "Railway_lines.Model.TrainDetailsTable",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Railway_lines.Controllers.ValuesController",
+    "Method": "DeleteById",
+    "RelativePath": "api/Values/DeleteById",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Railway_lines.Controllers.ValuesController",
+    "Method": "GetAllTrainDetails",
+    "RelativePath": "api/Values/GetAllTrainDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Railway_lines.Controllers.ValuesController",
+    "Method": "GetByTrainName",
+    "RelativePath": "api/Values/GetByTrainName",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trainName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Railway_lines.Controllers.ValuesController",
+    "Method": "GetTrainsByRoute",
+    "RelativePath": "api/Values/GetTrainsByRoute",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sourceStation",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "destinationStation",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Railway_lines.Controllers.ValuesController",
+    "Method": "UpdateTrainDetails",
+    "RelativePath": "api/Values/UpdateTrainDetails",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trainDetails",
+        "Type": "Railway_lines.Model.TrainDetailsTable",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Railway_lines.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Railway_lines.WeatherForecast, Railway lines, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

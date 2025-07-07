@@ -1,0 +1,90 @@
+/* .underline-input {
+    border: none;
+    border-bottom: 2px solid #2f4676; 
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    padding: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .underline-input:focus {
+    border-bottom: 2px solid #ff6600; 
+    padding-bottom: 3px;
+  } */
+  .input-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .input-field {
+    width: 100%;
+    padding: 8px 5px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #2f4676; 
+    outline: none;
+    background: transparent;
+  }
+
+  .input-label {
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    font-size: 16px;
+    color: #aaa;
+    transition: 0.3s ease-in-out;
+  }
+
+  .input-field:focus + .input-label,
+  .input-field:not(:placeholder-shown) + .input-label {
+    top: -12px;
+    font-size: 12px;
+    color: #2f4676;
+  }
+
+  
+  .random-code-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #1f3b75; 
+    /* padding: 5px; */
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  .random-input {
+    border: none;
+    background-color: transparent;
+    color: whitesmoke;
+    font-size: 20px;
+    width: 120px; 
+    text-align: center;
+    padding-right: 30px;
+  }
+  
+  .random-code-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    color: white;
+    font-size: 18px;
+  }
+  
+  .random-code-container button:hover {
+    color: lightgray;
+  }
+  
+.refresh-icon {
+  position: absolute;
+  right: 10px;  
+  cursor: pointer;
+  color: whitesmoke;
+  font-size: 18px;
+}
+.refresh-icon:hover {
+  color: lightgray;
+}
+  

@@ -1,0 +1,31 @@
+import { Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { TrainDetailComponent } from './train-detail/train-detail.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { AgentLoginComponent } from './agent-login/agent-login.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { AlertsComponent } from './alerts/alerts.component';
+import { HelpComponent } from './help/help.component';
+import { BookingComponent } from './booking/booking.component';
+import { BookTicketComponent } from './book-ticket/book-ticket.component';
+import { SearchResultComponent } from './search-result/search-result.component';
+import { HistoryComponent } from './history/history.component';
+import { AdminHistoryComponent } from './admin-history/admin-history.component';
+export const routes: Routes = [
+    { path: '', component: HomeComponent },
+      { path: 'train-detail', component: TrainDetailComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'irctc', component: TrainDetailComponent },
+      { path: 'register', component: RegisterComponent },
+      { path: 'agentlogin', component: AgentLoginComponent },
+      { path: 'contactus', component: ContactUsComponent },
+      { path: 'alert', component: AlertsComponent },
+      { path: 'home', component: HomeComponent },
+      { path: 'help', component: HelpComponent },
+      { path: 'booking', component: BookingComponent },
+      { path: 'book-ticket', component: BookTicketComponent },
+      { path: 'search-result', component: SearchResultComponent },
+      { path: 'history', component: HistoryComponent },
+      { path: 'admin-history', component: AdminHistoryComponent },
+];

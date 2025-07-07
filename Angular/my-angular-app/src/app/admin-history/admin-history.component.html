@@ -1,0 +1,77 @@
+
+    <h3 style="background-color: rgb(5,5,95); color: whitesmoke; height: 40px;">Get User's History Here</h3>
+
+    <div class="form-group">
+        <input type="text" [(ngModel)]="userName" placeholder="Enter UserName" class="form-control" />
+        <button (click)="fetchBookingsByUser()" class="btn btn-primary mt-2">Get Bookings</button>
+      </div>
+    <!-- <div>
+        <label style="color:rgb(5, 5, 70); margin-left: 2%;">Enter UserName:</label>
+        <input type="text" placeholder="UserName" style="margin-left: 2%;">
+    </div>
+    <div>
+
+        <button (click)="fetchBookingsByUser(item)" type="button" class="btn btn-info">Info</button>
+    </div> -->
+    <div *ngIf="userBookings.length > 0" class="mt-3">
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Train Id</th>
+            <th>Train Name</th>
+            <th>Train Type</th>
+            <th>Source Station</th>
+            <th>Destination Station</th>
+            <th>Departure Time</th>
+            <th>Arrival Time</th>
+            <th>Journey Duration</th>
+            <!-- <th>Total Seats</th>
+            <th>Available Seats</th> -->
+            <th>Fare</th>
+            <th>Journey Date</th>
+            <th>Booking Date</th>
+            <th>Booking Time</th>
+            <th>UserName</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Booking Id</th>
+          </tr>
+        </thead>
+        <!-- <tbody *ngIf="AllBooking.length > 0; else noData">
+            <tr style="text-align: center;" *ngFor="let item of AllBooking"> -->
+                <tbody>
+                <tr *ngFor="let item of userBookings">
+                <!-- <td>{{ item.bookingId }}</td> -->
+              <td>{{ item.trainId }}</td>
+              <td>{{ item.trainName }}</td>
+              <td>{{ item.trainType }}</td>
+              <td>{{ item.sourceStation }}</td>
+              <td>{{ item.destinationStation }}</td>
+              <td>{{ item.departureTime }}</td>
+              <td>{{ item.arrivalTime }}</td>
+              <td>{{ item.journeyDuration }}</td>
+              <!-- <td>{{ item.totalSeats }}</td>
+              <td>{{ item.availableSeats }}</td> -->
+              <td>{{ item.fare }}</td>
+              <td>{{ item.journeyDate }}</td>
+              <td>{{ item.bookingDate }}</td>
+              <td>{{ item.bookingTime }}</td>
+              <td>{{ item.userName }}</td>
+              <td>{{ item.name }}</td>
+              <td>{{ item.age }}</td>
+              <td>{{ item.bookingId }}</td>
+              <!-- <td>
+                <button (click)="fetchBookingsByUser(item)" style="border: none; background-color: rgb(181, 181, 236);"><i class="bi bi-pencil-square"></i></button>
+              </td> -->
+            </tr>
+            <br>
+          </tbody>  
+    </table>
+    </div>
+<ng-template #noData>
+    <tbody>
+      <tr>
+        <td colspan="11" style="text-align:center;">No Booking details available</td>
+      </tr>
+    </tbody>
+  </ng-template>

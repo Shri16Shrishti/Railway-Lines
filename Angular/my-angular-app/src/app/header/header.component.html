@@ -1,0 +1,265 @@
+<nav class="navbar navbar-expand-lg"
+  style="background-color: white; padding: 5px 10px; min-height: 60px; display: flex; align-items: center; justify-content: space-between;">
+  <div class="container-fluid d-flex align-items-center justify-content-between w-100">
+    <img src="/IndianRailways.png" width="100" height="100" alt="Railway"
+      style=" margin-left: 10px; flex-shrink: 0;display: flex; align-items: left; justify-content: space-between; padding: 10px; flex-wrap: nowrap;">
+
+    <div style="display: flex; flex-direction: column; align-items: center; flex-grow: 1;">
+      <div class="collapse navbar-collapse justify-content-center">
+        <ul class="navbar-nav mb-2 mb-sm-0"
+          style="font-size: 12px; margin-left: 20px;min-height: 20px;border:none; font-family: Arial, sans-serif;">
+          <li class="nav-item"
+            style="margin: 5px; border: 1px solid white; padding: 4px 2px; background-color: rgb(5, 5, 70);">
+            <!-- <span routerLink="login">Login</span> -->
+            <a class="nav-link active" routerLink="login"
+              style="cursor: pointer; padding: 5px 8px; color: whitesmoke;">LOGIN</a>
+          </li>
+          <li class="nav-item" style="margin: 5px; border: 1px solid white; padding: 5px 5px; background-color: white;">
+            <a class="nav-link active" routerLink="register" style="cursor: pointer; padding: 5px 8px; color: black;">REGISTER</a>
+          </li>
+          <li class="nav-item"
+            style="margin: 5px; border: 1px solid white; border-radius: 5px; padding: 5px 5px; background-color: white;">
+            <a class="nav-link active" routerLink="agentlogin" style="cursor: pointer; padding: 5px 8px; color: black;">AGENT LOGIN</a>
+          </li>
+          <li class="nav-item"
+            style="margin: 5px; border: 1px solid white; border-radius: 5px; padding: 5px 5px; background-color: white;">
+            <a class="nav-link active" routerLink="contactus" style="cursor: pointer; padding: 5px 8px; color: black;">CONTACT US</a>
+          </li>
+          <li class="nav-item"
+            style="margin: 5px; border: 1px solid white; border-radius: 5px; padding: 5px 5px; background-color: white;">
+            <a class="nav-link active" routerLink="help" style="cursor: pointer; padding: 5px 8px; color: black;">HELP&SUPPORT</a>
+          </li>
+
+          <li class="nav-item"
+            style="margin: 5px; border: 1px solid white; border-radius: 5px; padding: 5px 5px; background-color: white;">
+            <a class="nav-link active" href="https://www.amazon.in/deals?linkCode=ll2&tag=irctcdev07-21&linkId=6e8e3d8f31513cf92e862073d65fefae&language=en_IN&ref_=as_li_ss_tl&_encoding=UTF8&tag=irctcdev07-21&linkCode=ur2&linkId=41c3b8fb1ad95d37bf6d1ce4f06d8dc1&camp=3638&creative=24630" style="cursor: pointer; padding: 5px 8px; color: rgb(243, 31, 31);">DAILY
+              DEALS</a>
+          </li>
+          <li class="nav-item"
+            style="margin: 5px; border: 1px solid white; padding: 5px 5px; background-color: rgb(150, 147, 147);">
+            <a class="nav-link active" routerLink="alert" style="cursor: pointer; padding: 5px 8px; color: black;">ALERTS</a>
+          </li>
+          <li class="nav-item"
+            style="margin: 5px; border: 1px solid white; border-radius: 5px; padding: 5px 5px; background-color: white;">
+            <a class="nav-link active"
+              style="cursor: pointer; padding: 5px 8px; color: black;font-weight: bold;">DATE</a>
+          </li>
+          <!-- <li class="nav-item"
+                    style="margin: 5px; border: 1px solid white; border-radius: 5px; padding: 5px 5px; background-color: white;">
+                    <a class="nav-link active"
+                        style="cursor: pointer; padding: 5px 8px; color: black; font-weight: bold;">
+                        {{ currentDateTime }}
+                    </a>
+                </li> -->
+
+          <li class="nav-item"
+            style="margin: 5px; border: 1px solid white; border-radius: 5px; padding: 5px 5px; background-color: white;">
+            <a class="nav-link active" style="cursor: pointer; padding: 5px 8px; color: black;font-weight: bold;">A-</a>
+          </li>
+          <li class="nav-item"
+            style="margin: 5px; border: 1px solid white; border-radius: 5px; padding: 5px 5px; background-color: white;">
+            <a class="nav-link active" style="cursor: pointer; padding: 5px 8px; color: black;font-weight: bold;">A</a>
+          </li>
+          <li class="nav-item"
+            style="margin: 5px; border: 1px solid white; border-radius: 5px; padding: 5px 5px; background-color: white;">
+            <a class="nav-link active" style="cursor: pointer; padding: 5px 8px; color: black;font-weight: bold;">A+</a>
+          </li>
+          <li class="nav-item"
+            style="margin: 5px; border: 1px solid white; border-radius: 5px; padding: 5px 5px; background-color: white;">
+            <a class="nav-link active"
+              style="cursor: pointer; padding: 5px 8px; color: black;font-weight: bold;">हिंदी</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="collapse navbar-collapse justify-content-center">
+        <ul class="navbar-nav mb-2 mb-sm-0"
+          style="font-size: 12px; min-height: 30px;border:none; font-family: Arial, sans-serif;">
+          <li class="nav-item"
+            style="margin: 5px; border: 1px solid white; border-radius: 5px; background-color: white;">
+            <a class="nav-link active" routerLink="home"> <i class="bi bi-house-door-fill"
+                style="font-size: large; color: grey;"></i>
+            </a>
+          </li>
+          <li class="nav-item"
+            style="margin: 5px; border: 1px solid white; border-radius: 5px; background-color: rgb(5, 5, 70);">
+            <a class="nav-link active" routerLink="irctc"
+              style="cursor: pointer; padding: 5px 8px; color: whitesmoke; font-family: Verdana, Geneva, Tahoma, sans-serif;">IRCTC
+              EXCLUSIVE</a>
+              <ul>
+                <li><a href="#">IRCTC i-pay</a></li>
+                <li><a href="#">Shopping</a></li>
+              </ul>
+          </li>
+          <li class="nav-item"
+            style="margin: 5px; border: 1px solid white; border-radius: 5px; background-color: white;">
+            <a class="nav-link active"
+              style="cursor: pointer; padding: 5px 8px; color: rgb(248, 73, 10);text-decoration: underline;font-weight: bold;">BOOK TICKET</a>
+              <ul>
+                <li class="nav-item">
+                  <a class="nav-link active" routerLink="/book-ticket" style="text-decoration:2px solid underline; text-decoration-color:orangered; color: orangered;">BOOK TICKETS</a>
+    
+                </li>
+                <!-- <li><a href="#" routerLink = "train-detail">Train Details</a></li> -->
+                 <li class="nav-item">
+              <a class="nav-link active" routerLink="/train-detail" style="text-decoration:2px solid underline; text-decoration-color:orangered; color: orangered;">TRAINS</a>
+
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" routerLink="/booking" style="text-decoration:2px solid underline; text-decoration-color:orangered; color: orangered;">BOOKING DETAILS</a>
+
+            </li>
+                <li><a href="#">Foreign Tourist Booking</a></li>
+                <li><a href="#">Connecting Journey Booking</a></li>
+                <li><a href="#">IRCTC Trains</a></li>
+                <li><a href="#">Cancel Ticket</a></li>
+                <li><a href="#">PNR Enquiry</a></li>
+                <li><a href="#">Train Schedule</a></li>
+                <li><a href="#">Track Your Train</a></li>
+                <li><a href="#">FTR Coach/Train Booking</a></li>
+                <li><a href="#">Dogs/Cats Booking</a></li>
+
+              </ul>
+              
+            </li> 
+            <!-- <li class="nav-item">
+              <a class="nav-link active" routerLink="/train-detail" style="text-decoration:2px solid underline; text-decoration-color:orangered; color: orangered;">TRAINS</a>
+
+            </li> -->
+            <li class="nav-item"
+            style="margin: 5px; border: 1px solid white; border-radius: 5px; background-color: white;">
+            <a class="nav-link active"
+              style="cursor: pointer; padding: 5px 8px; color: black;font-weight: bold;">LOYALITY</a>
+              <ul>
+                <li><a href="#">About IRCTC Loyalty program</a></li>
+                <li><a href="#">IRCTC SBI Credit Card</a></li>
+                <li><a href="#">IRCTC BOB Credit Card</a></li>
+                <li><a href="#">IRCTC HDFC Credit Card</a></li>
+                <li><a href="#">IRCTC RBL Credit Card</a></li>
+              </ul>
+          </li>
+          <li class="nav-item"
+            style="margin: 5px; border: 1px solid white; border-radius: 5px; background-color: white;">
+            <a class="nav-link active"
+              style="cursor: pointer; padding: 5px 8px; color: black;text-decoration: underline rgb(248, 73, 10);font-weight: bold;">IRCTC
+              eWallet</a>
+              <ul>
+                <li><a href="#">About IRCTC eWallet</a></li>
+                <li><a href="#">IRCTC eWallet User Guide</a></li>
+              </ul>
+          </li>
+          <li class="nav-item"
+            style="margin: 5px; border: 1px solid white; border-radius: 5px;  background-color: white;">
+            <a class="nav-link active" href="https://www.bus.irctc.co.in/home"
+              style="cursor: pointer; padding: 5px 8px; color: black;font-weight: bold;">BUSES</a>
+          </li>
+          <li class="nav-item"
+            style="margin: 5px; border: 1px solid white; border-radius: 5px; background-color: white;">
+            <a class="nav-link active" href="https://www.air.irctc.co.in/"
+              style="cursor: pointer; padding: 5px 8px; color: black;font-weight: bold;">FLIGHTS</a>
+          </li>
+          <li class="nav-item"
+            style="margin: 5px; border: 1px solid white; border-radius: 5px; background-color: white;">
+            <a class="nav-link active" href="https://www.hotels.irctc.co.in/hotels"
+              style="cursor: pointer; padding: 5px 8px; color: black;font-weight: bold;">HOTELS</a>
+          </li>
+          <li class="nav-item"
+            style="margin: 5px; border: 1px solid white; border-radius: 5px; background-color: white;">
+            <a class="nav-link active"
+              style="cursor: pointer; padding: 5px 8px; color: black;font-weight: bold;">HOLIDAYS</a> <ul>
+                <li><a href="#">Tourist Trains</a></li>
+                <li><a href="#">Tour Packages</a></li>
+                <li><a href="#">Stays</a></li>
+              </ul>
+          </li>
+          <li class="nav-item"
+            style="margin: 5px; border: 1px solid white; border-radius: 5px; background-color: white;">
+            <a class="nav-link active"
+              style="cursor: pointer; padding: 5px 8px; color: black;font-weight: bold;">MEALS</a>
+              <ul>
+                <li><a href="#">Order Food -E-Catering</a></li>
+                <li><a href="#">Cooked Food Menu</a></li>
+              </ul>
+          </li>
+          <li class="nav-item"
+            style="margin: 5px; border: 1px solid white; border-radius: 5px; background-color: white;">
+            <a class="nav-link active"
+              style="cursor: pointer; padding: 5px 8px; color: black;font-weight: bold;">PROMOTION</a>
+              <ul>
+                <li><a href="#">Advertise with us</a></li>
+                <li><a href="#">IRCTC Rail Connect App</a></li>
+                <li><a href="#">IRCTC Tourism App</a></li>
+                <li><a href="#">IRCTC Air App</a></li>
+                <li><a href="#">National Rail Museum</a></li>
+                <li><a href="#">UTS TICKET APP</a></li>
+                <li><a href="#">IRCTC Co-Branded Cards</a></li>
+                <li><a href="#">Trains At A Glance</a></li>
+                <li><a href="#">National Voter's Service Portal</a></li>
+                <li><a href="#">Rail Drishti</a></li>
+                <li><a href="#">Indian Railways Magazines</a></li>
+                <li><a href="#">Railways Freight Business</a></li>
+              </ul>
+          </li>
+          <li class="nav-item"
+            style="margin: 5px; border: 1px solid white; border-radius: 5px; background-color: white;">
+            <a class="nav-link active"
+              style="cursor: pointer; padding: 5px 8px; color: black;font-weight: bold;">MORE</a>
+              <ul>
+                <li class="nav-item">
+                  <a class="nav-link active" routerLink="/history" style="text-decoration:2px solid underline; text-decoration-color:orangered; color: orangered;">HISTORY</a>
+    
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" routerLink="/admin-history" style="text-decoration:2px solid underline; text-decoration-color:orangered; color: orangered;">HISTORY(ADMIN)</a>
+    
+                </li>
+                <li><a href="#">ChatBot as a Service (Caas)</a></li>
+                <li><a href="#">Link Your Aadhaar</a></li>
+                <li><a href="#">Counter Ticket Cancellation</a></li>
+                <li><a href="#">Counter Ticket Boarding Point</a></li>
+                <li><a href="#">Forgot Account Details?</a></li>
+                <li><a href="#">At Station</a></li>
+              </ul>
+          </li>
+          <li class="nav-item">
+            <!-- <a class="nav-link active" routerLink="/home" style="text-decoration:2px solid underline; text-decoration-color:orangered; color: red;">LOGOUT</a> -->
+            <button (click)="logout()" style="background-color: red;color: whitesmoke;"><i class="bi bi-power"></i></button>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+    <img src="/Irctc.jpg" width="80" height="80" alt="IRCTC" style=" margin-top: -10px; flex-shrink: 0;">
+  </div>
+</nav>
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand">CM Helpline</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="Complaint">Add Complaint</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="dashboard">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="login">Login</a>
+      </li>
+
+
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav> -->
